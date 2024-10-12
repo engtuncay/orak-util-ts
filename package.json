@@ -1,22 +1,16 @@
 {
-  "name": "typescript-library-template",
-  "version": "1.0.0",
-  "description": "Starter template for TypeScript libraries",
+  "name": "orak-util-ts",
+  "version": "0.0.1",
+  "description": "Orak Software Utility Library - Typescript",
   "main": "lib/main/index.js",
   "typings": "lib/main/index.d.ts",
   "module": "lib/module/index.js",
-  "repository": "https://github.com/amelspahic/typescript-library-template.git",
-  "author": "Amel Spahic",
+  "repository": "https://github.com/engtuncay/orak-util-ts.git",
+  "author": "Tuncay Orak",
   "license": "MIT",
   "keywords": [
     "typescript",
-    "library",
-    "template",
-    "starter",
-    "starter-template",
-    "starter-template-typescript",
-    "starter-template-typescript-library",
-    "tests"
+    "library"
   ],
   "scripts": {
     "build": "run-p build:*",
