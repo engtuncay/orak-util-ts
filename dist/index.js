@@ -20,10 +20,18 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  FiMeta: () => FiMeta,
   Fikeybean: () => Fikeybean,
   greet: () => greet
 });
 module.exports = __toCommonJS(src_exports);
+
+// src/FiMeta.ts
+var FiMeta = class {
+  txKey;
+  txValue;
+  lnKey;
+};
 
 // src/Fikeybean.ts
 var Fikeybean = class {
@@ -38,6 +46,7 @@ function greet(name) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  FiMeta,
   Fikeybean,
   greet
 });

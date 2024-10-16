@@ -1,3 +1,9 @@
+declare class FiMeta {
+    txKey: string;
+    txValue: string;
+    lnKey: number;
+}
+
 declare class Fikeybean {
     mapData: Map<any, any>;
     constructor();
@@ -5,4 +11,4 @@ declare class Fikeybean {
 
 declare function greet(name: string): string;
 
-export { Fikeybean, greet };
+export { FiMeta, Fikeybean, greet };

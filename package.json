@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Orak Software Utility Typescript Library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/engtuncay/orak-util-ts#readme",
   "devDependencies": {
     "tsup": "^8.3.0",
-    "typescript": "^5.6.3",
+    "typescript": "^5.2.2",
     "vitest": "^2.1.2"
   }
 }
