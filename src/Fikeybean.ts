@@ -1,4 +1,4 @@
-export class Fikeybean {
+export class FiKeybean {
   mapData = new Map();
 
   constructor() {}

@@ -1,5 +1,5 @@
 export class FiMeta {
-  txKey!: string;
-  txValue!: string;
-  lnKey!: number;
+  txKey?: string;
+  txValue?: string;
+  lnKey?: number;
 }
