@@ -1,8 +1,38 @@
+// src/core/FiString.ts
+var FiString = class {
+  static orEmpty(value) {
+    if (value == void 0) return "";
+    return value;
+  }
+};
+
+// src/core/FiNumber.ts
+var FiNumber = class {
+  static orZero(value) {
+    if (value == void 0) return 0;
+    return value;
+  }
+  static orMinusOne(value) {
+    if (value == void 0) return -1;
+    return value;
+  }
+};
+
 // src/FiMeta.ts
 var FiMeta = class {
   txKey;
   txValue;
   lnKey;
+  // Getters
+  getTxKeyNtn() {
+    return FiString.orEmpty(this.txKey);
+  }
+  getTxValueNtn() {
+    return FiString.orEmpty(this.txValue);
+  }
+  getLnKeyOrMinusOne() {
+    return FiNumber.orMinusOne(this.lnKey);
+  }
 };
 
 // src/Fdr.ts
@@ -160,6 +190,8 @@ export {
   FiCol,
   FiKeybean,
   FiMeta,
+  FiNumber,
+  FiString,
   OreLog,
   greet
 };

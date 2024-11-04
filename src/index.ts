@@ -1,3 +1,5 @@
+export { FiString } from "./core/FiString";
+export { FiNumber } from "./core/FiNumber";
 export { FiMeta } from "./FiMeta";
 export { Fdr } from "./Fdr";
 export { OreLog } from "./OreLog";

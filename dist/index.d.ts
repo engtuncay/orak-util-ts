@@ -1,7 +1,19 @@
+declare class FiString {
+    static orEmpty(value: string | undefined): string;
+}
+
+declare class FiNumber {
+    static orZero(value: number | undefined): number;
+    static orMinusOne(value: number | undefined): number;
+}
+
 declare class FiMeta {
     txKey?: string;
     txValue?: string;
     lnKey?: number;
+    getTxKeyNtn(): string;
+    getTxValueNtn(): string;
+    getLnKeyOrMinusOne(): number | undefined;
 }
 
 declare class OreLog {
@@ -85,4 +97,4 @@ declare class FiKeybean {
 
 declare function greet(name: string): string;
 
-export { Fdr, FiCol, FiKeybean, FiMeta, OreLog, greet };
+export { Fdr, FiCol, FiKeybean, FiMeta, FiNumber, FiString, OreLog, greet };
