@@ -77,7 +77,7 @@ var OreLog = class {
 };
 
 // src/FiCol.ts
-var FiCol = class {
+var FiCol = class _FiCol {
   ofcTxFieldName;
   ofcTxHeader;
   txLabel;
@@ -172,6 +172,12 @@ var FiCol = class {
   // fnValidate?:Function;
   boEditorOnlyNumber;
   boWhereField;
+  static bui(txFieldName, txHeader) {
+    let fiCol = new _FiCol();
+    fiCol.ofcTxFieldName = txFieldName;
+    fiCol.ofcTxHeader = txHeader;
+    return fiCol;
+  }
 };
 
 // src/FiKeybean.ts

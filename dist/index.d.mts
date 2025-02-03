@@ -88,6 +88,7 @@ declare class FiCol {
     lnCode?: number;
     boEditorOnlyNumber?: boolean;
     boWhereField?: boolean;
+    static bui(txFieldName: string, txHeader: string): FiCol;
 }
 
 declare class FiKeybean {

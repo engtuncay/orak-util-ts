@@ -95,4 +95,11 @@ export class FiCol {
   // fnValidate?:Function;
   boEditorOnlyNumber?: boolean;
   boWhereField?: boolean;
+
+  public static bui(txFieldName:string,txHeader:string):FiCol {
+    let fiCol = new FiCol();
+    fiCol.ofcTxFieldName = txFieldName;
+    fiCol.ofcTxHeader = txHeader;
+    return fiCol;
+  }
 }
