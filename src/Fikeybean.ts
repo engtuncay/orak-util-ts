@@ -1,5 +1,5 @@
 export class FiKeybean {
-  mapData = new Map();
+  mapData: Map<string,any> = new Map();
 
   constructor() {}
 }
