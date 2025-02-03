@@ -177,6 +177,10 @@ var FiCol = class {
 // src/FiKeybean.ts
 var FiKeybean = class {
   mapData = /* @__PURE__ */ new Map();
+  fiPut(txKey, value) {
+    this.mapData.set(txKey, value);
+    return this;
+  }
   constructor() {
   }
 };

@@ -92,6 +92,7 @@ declare class FiCol {
 
 declare class FiKeybean {
     mapData: Map<string, any>;
+    fiPut(txKey: string, value: any): FiKeybean;
     constructor();
 }
 
