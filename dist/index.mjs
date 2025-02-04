@@ -187,6 +187,15 @@ var FiKeybean = class {
     this.mapData.set(txKey, value);
     return this;
   }
+  fiGetAsStringNtn(txKey) {
+    if (txKey == void 0) return "";
+    if (this.mapData.has(txKey)) return this.mapData.get(txKey).toString();
+    return "";
+  }
+  fiGet(txKey) {
+    if (txKey == void 0) return void 0;
+    return this.mapData.get(txKey);
+  }
   constructor() {
   }
 };
