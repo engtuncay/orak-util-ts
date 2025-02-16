@@ -1,10 +1,11 @@
 {
   "name": "orak-util-ts",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Orak Software Utility Typescript Library",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "type":"module",
+  "main": "dist/orak-util-ts.cjs",
+  "module": "dist/orak-util-ts.js",
+  "types": "dist/orak-util-ts.d.ts",
   "files": [
     "dist"
   ],
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/engtuncay/orak-util-ts#readme",
   "devDependencies": {
+    "terser": "^5.39.0",
     "tsup": "^8.3.0",
     "typescript": "^5.2.2",
     "vitest": "^2.1.2"
