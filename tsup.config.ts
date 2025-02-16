@@ -1,6 +1,7 @@
 import { defineConfig } from "tsup";
 import { minify } from "terser";
-import fs from "fs/promises";
+//import fs from "fs/promises";
+import { promises as fs } from "fs";
 //alternatif tanımlama
 //import { promises as fs } from "fs";
 
