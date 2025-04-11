@@ -5,6 +5,7 @@ export { Fdr } from "./Fdr";
 export { OreLog } from "./OreLog";
 export { FiCol } from "./FiCol";
 export { FiKeybean } from "./FiKeybean";
+export { IFiMeta } from "./fimeta/IFiMeta";
 
 export function greet(name: string): string {
   return `Hello, ${name}!`;

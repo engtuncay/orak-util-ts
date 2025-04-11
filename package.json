@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "0.0.18",
+  "version": "0.0.21",
   "description": "Orak Software Utility Typescript Library",
   "type": "module",
   "main": "dist/orak-util-ts.cjs",
@@ -14,7 +14,7 @@
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
-    "publish": "pnpm publish",
+    "publish": "pnpm publish --no-git-checks",
     "pnpm-link":"pnpm link --global"
   },
   "keywords": [
