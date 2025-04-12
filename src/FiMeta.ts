@@ -17,7 +17,7 @@ export class FiMeta implements IFiMeta {
     return FiString.orEmpty(this.fimTxValue);
   }
 
-  public getLnKeyOrMinusOne(): number | undefined {
+  public getLnKeyOrMinusOne(): number {
     return FiNumber.orMinusOne(this.fimLnKey);
   }
 
