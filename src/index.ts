@@ -1,3 +1,4 @@
+export {FiKeyEntity} from "./fiDataContainer/FiKeyEntity";
 export {FiFetchClient} from "./fiapi/FiFetchClient";
 export {FiHttpClient} from "./fiapi/FiHttpClient";
 export {FiString} from "./core/FiString";
@@ -10,6 +11,6 @@ export {FiKeybean} from "./FiKeybean";
 export {IFiMeta} from "./fimeta/IFiMeta";
 
 export function greet(name: string): string {
-    //let a = new FiFetchClient()
+    //let a = new FiKeyEntity()
     return `Hello, ${name}!`;
 }
