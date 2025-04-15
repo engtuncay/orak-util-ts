@@ -1,6 +1,8 @@
 import { OreLog } from "./OreLog";
+import {JSX} from "react";
 
 export class Fdr {
+
   boResult?: boolean;
   message?: string;
   value?: object;
@@ -11,9 +13,11 @@ export class Fdr {
   rowsAffected?: number;
   lnTotalCount?: number;
   boFalseExist?: boolean;
-  // exception?:Exception;
+
   listException?: Array<object>;
   lnStatus?: number;
+
+  // exception?:Exception;
   // lnSuccessOpCount?: number;
   // lnFailureOpCount?: number;
   // txQueryType?: string;
