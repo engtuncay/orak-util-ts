@@ -1,5 +1,4 @@
 import { OreLog } from "./OreLog";
-import {JSX} from "react";
 
 export class Fdr {
 
