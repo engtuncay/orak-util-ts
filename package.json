@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "0.0.36",
+  "version": "0.0.42",
   "description": "Orak Software Utility Typescript Library",
   "type": "module",
   "main": "dist/orak-util-ts.cjs",
@@ -11,13 +11,13 @@
   ],
   "fiBuildComment": "Add new class to index.ts",
   "scripts": {
-    "ku-install": "pnpm install",
+    "ku-install": "yarn",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
-    "publish": "pnpm publish --no-git-checks",
-    "ku-buildPub": "tsup && pnpm publish --no-git-checks",
+    "ku-publish": "yarn publish --no-git-checks",
+    "ku-buildPub": "tsup && yarn publish --no-git-checks",
     "pnpm-link-orak-util-ts": "pnpm link --global",
     "pn-unlink-orak-util-ts": "pnpm unlink orak-util-ts",
     "pn-list-global": "pnpm list -g"
@@ -45,9 +45,5 @@
   },
   "dependencies": {
     "axios": "^1.8.4"
-  },
-  "peerDependencies": {
-    "solid-js": "^1.9.5"
   }
 }
-
