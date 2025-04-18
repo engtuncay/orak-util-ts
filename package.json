@@ -11,16 +11,16 @@
   ],
   "fiBuildComment": "Add new class to index.ts",
   "scripts": {
-    "ku-install": "yarn",
+    "install-kuts": "yarn install",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
-    "ku-publish": "yarn publish --no-git-checks",
-    "ku-buildPub": "tsup && yarn publish --no-git-checks",
-    "pnpm-link-orak-util-ts": "pnpm link --global",
-    "pn-unlink-orak-util-ts": "pnpm unlink orak-util-ts",
-    "pn-list-global": "pnpm list -g"
+    "publish-kuts": "yarn publish --no-git-checks",
+    "buildPub-kuts": "tsup && yarn publish --no-git-checks",
+    "link-kuts": "yarn link",
+    "unlink-kuts": "yarn unlink orak-util-ts",
+    "list-global": "yarn list -g"
   },
   "keywords": [
     "typescript",
