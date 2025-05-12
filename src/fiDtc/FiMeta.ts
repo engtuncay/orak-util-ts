@@ -1,6 +1,6 @@
-import { FiNumber } from "./core/FiNumber";
-import { FiString } from "./core/FiString";
-import {IFiMeta} from "./fimeta/IFiMeta";
+import { FiNumber } from "../fiCore/FiNumber";
+import { FiString } from "../fiCore/FiString";
+import {IFiMeta} from "./IFiMeta";
 
 export class FiMeta implements IFiMeta {
   fimTxKey?: string;
