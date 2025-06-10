@@ -11,16 +11,16 @@
   ],
   "fiBuildComment": "Add new class to index.ts",
   "scripts": {
-    "install-okuts": "yarn install",
+    "install-okuts": "pnpm install",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
-    "publish-okuts": "yarn publish --no-git-checks",
+    "publish-okuts": "pnpm publish --no-git-checks",
     "buildPub-okuts": "tsup && yarn publish --no-git-checks",
-    "link-okuts": "yarn link",
-    "unlink-okuts": "yarn unlink orak-util-ts",
-    "list-global": "yarn list -g"
+    "link-okuts": "pnpm link",
+    "unlink-okuts": "pnpm unlink orak-util-ts",
+    "list-global": "pnpm list -g"
   },
   "keywords": [
     "typescript",
@@ -37,7 +37,6 @@
   },
   "homepage": "https://github.com/engtuncay/orak-util-ts#readme",
   "devDependencies": {
-    "solid-js": "^1.9.5",
     "terser": "^5.39.0",
     "tsup": "^8.3.0",
     "typescript": "^5.2.2",
@@ -45,5 +44,8 @@
   },
   "dependencies": {
     "axios": "^1.8.4"
+  },
+  "devDependenciesComment": {
+    "solid-js": "^1.9.5"
   }
 }
