@@ -6,7 +6,7 @@ export {FiString} from "./fiCore/FiString";
 export {FiNumber} from "./fiCore/FiNumber";
 export {FiMeta} from "./fiDtc/FiMeta";
 export {Fdr} from "./fiDtc/Fdr";
-export {OreLog} from "./fiDtc/OreLog";
+export {FiLog} from "./fiDtc/FiLog";
 export {FiCol} from "./fiDtc/FiCol";
 export {FiKeybean} from "./fiDtc/FiKeybean";
 export type {IFiMeta} from "./fiDtc/IFiMeta";
