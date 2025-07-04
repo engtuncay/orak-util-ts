@@ -1,3 +1,6 @@
+/**
+ * FiFetchClient
+ */
 export class FiFetchClient {
     private baseUrl: string;
     private defaultHeaders: HeadersInit;
