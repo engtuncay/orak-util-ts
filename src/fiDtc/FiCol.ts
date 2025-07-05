@@ -1,11 +1,8 @@
 export class FiCol {
+
   ofcTxFieldName?: string;
   ofcTxHeader?: string;
-  txLabel?: string;
   ofcTxDbFieldName?: string;
-  txGuid?: string;
-
-  ofiTxIdType?: string;
   ofcBoUniqGro1?: boolean;
   ofcBoNullable?: boolean;
   ofcBoUnique?: boolean;
@@ -20,8 +17,11 @@ export class FiCol {
   ofcTxFieldType?: string;
   ofcTxEntityName?: string;
   oftBoTransient?: boolean;
-  ficTxSqlFieldDefinition?: string;
-
+  
+  txLabel?: string;
+  txGuid?: string;
+  ofiTxIdType?: string;
+  //ficTxSqlFieldDefinition?: string;
   //prefSize?:ObjectProperty;
   printSize?: number;
   colType?: string;
