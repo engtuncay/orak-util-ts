@@ -1,4 +1,4 @@
-import { OreLog } from "./OreLog";
+import { FiLog } from "./FiLog";
 
 export class Fdr {
 
@@ -8,7 +8,7 @@ export class Fdr {
   lnResponseCode?: number;
   txId?: string;
   txName?: string;
-  logList?: Array<OreLog>;
+  logList?: Array<FiLog>;
   rowsAffected?: number;
   lnTotalCount?: number;
   boFalseExist?: boolean;
@@ -30,7 +30,7 @@ export class Fdr {
   // boLockAddLog?: boolean;
   //obsMethodFinished?: Array;
 
-  getLogListNtn(): Array<OreLog> {
+  getLogListNtn(): Array<FiLog> {
     if (this.logList == null) {
       this.logList = new Array();
     }
