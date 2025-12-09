@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Orak Software Utility Typescript Library",
   "type": "module",
   "main": "dist/orak-util-ts.cjs",
@@ -18,7 +18,7 @@
     "build": "tsup",
     "np-publish": "pnpm publish --no-git-checks",
     "np-build-publish": "tsup && pnpm publish --no-git-checks",
-    "np-link": "pnpm link",
+    "np-link-global": "pnpm link --global",
     "np-unlink": "pnpm unlink orak-util-ts",
     "np-list-global": "pnpm list -g"
   },

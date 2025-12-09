@@ -1,3 +1,5 @@
+import { FiMeta } from "./FiMeta";
+
 export class FiKeybean {
   mapData: Map<string, any> = new Map();
 
@@ -19,7 +21,7 @@ export class FiKeybean {
 
 
   public getAsObject(): Record<string, any> {
-    
+
     const obj: Record<string, any> = {};
 
     for (const [k, v] of this.mapData.entries()) {
@@ -31,5 +33,9 @@ export class FiKeybean {
 
 
   constructor() {
+  }
+
+  public addFieldByFiMeta(fiMeta: FiMeta, txValue: string):void {
+    this.fiPut(fiMeta.getTxKeyNtn(), txValue);
   }
 }
