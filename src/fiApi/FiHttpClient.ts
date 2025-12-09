@@ -1,18 +1,23 @@
 import axios from "axios";
 import type { AxiosInstance,AxiosRequestConfig, AxiosResponse } from "axios";
+import { FiKeybean } from "../fiDtc/FiKeybean";
 
 export class FiHttpClient {
 
     private axiosInstance: AxiosInstance;
 
-    constructor(baseURL: string, timeout = 10000) {
-        // Axios için özelleştirilmiş bir instance oluştur
+    constructor(baseURL: string, timeout = 10000, fkbExtraHeaders?: FiKeybean) {
+        
+      const headersAll = {
+        "Content-Type": "application/json",
+        ...fkbExtraHeaders?.getAsObject()
+      }
+      
+      // Axios için özelleştirilmiş bir instance oluştur
         this.axiosInstance = axios.create({
             baseURL,
             timeout,
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: headersAll,
         });
 
 
