@@ -13,6 +13,8 @@ export {FkbList} from "./fiDtc/FkbList";
 export {FicList} from "./fiDtc/FicList";
 export type {IFiMeta} from "./fiDtc/IFiMeta";
 export {FiLocalStorage} from "./fiBrowser/FiLocalStorage";
+export {FimFiCol} from "./fiMeta/FimFiCol";
+
 // export function greet(name: string): string {
 //     //let a = new FiKeyEntity()
 //     return `Hello, ${name}!`;
