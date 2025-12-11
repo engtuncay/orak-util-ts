@@ -1,3 +1,4 @@
+export { FiEnv } from "./fiCore/FiEnv";
 //export {Fel} from "./fiDataContainer/Fel";
 export { FiKeyEntity } from "./fiDtc/FiKeyEntity";
 export { FiFetchClient } from "./fiApi/FiFetchClient";
@@ -16,6 +17,7 @@ export { FiLocalStorage } from "./fiBrowser/FiLocalStorage";
 export { FimFiCol } from "./fiMeta/FimFiCol";
 export type { IFiTableFic } from "./fiDtc/IFiTableFic";
 export type { IFiTableFkb } from "./fiDtc/IFiTableFkb";
+
 // // Example function
 
 // export function greet(name: string): string {
