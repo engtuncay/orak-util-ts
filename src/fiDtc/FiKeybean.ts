@@ -1,3 +1,4 @@
+import { FimFiCol } from "../fiMeta/FimFiCol";
 import { FiMeta } from "./FiMeta";
 
 export class FiKeybean {
@@ -9,6 +10,12 @@ export class FiKeybean {
   }
 
   public fiGetAsStringNtn(txKey: string | undefined): string {
+    if (txKey == undefined) return "";
+    if (this.mapData.has(txKey)) return this.mapData.get(txKey).toString();
+    return "";
+  }
+
+  public getAsStringNtn(txKey: string | undefined): string {
     if (txKey == undefined) return "";
     if (this.mapData.has(txKey)) return this.mapData.get(txKey).toString();
     return "";
@@ -38,4 +45,9 @@ export class FiKeybean {
   public addFieldByFiMeta(fiMeta: FiMeta, txValue: string):void {
     this.fiPut(fiMeta.getTxKeyNtn(), txValue);
   }
+
+  public getFieldName(): string {
+    return this.fiGetAsStringNtn(FimFiCol.ofcTxFieldName().fimTxKey);
+  }
+
 }

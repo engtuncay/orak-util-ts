@@ -30,19 +30,25 @@ export class FiHttpClient {
         this.axiosInstance.interceptors.response.use(
             this.handleResponse,
             this.handleError
-        );
+          );
     }
 
     // Yanıtları düzenleyen interceptor handler
-    private handleResponse({data}: AxiosResponse) {
-        return data; // Direkt olarak response.data'yı döndürüyoruz
+    private handleResponse(response : AxiosResponse) { //{data}: AxiosResponse
+        return Promise.resolve(response); // data; // Direkt olarak response.data'yı döndürüyoruz
     }
 
     // Hataları düzenleyen interceptor handler
     private handleError(error: any) {
         console.error("API Hatası:", error);
-        return Promise.reject(error.message || "Bir hata oluştu");
+        //return Promise.reject(error.message || "Bir hata oluştu");
+        return Promise.reject(error);
     }
+
+    // private handleError(error: any) {
+        // console.error("API Hatası:", error);
+        // return Promise.reject(error.message || "Bir hata oluştu");
+    // }
 
     // GET Metodu
     public async get<T>(url: string, config?: AxiosRequestConfig): Promise<T> {

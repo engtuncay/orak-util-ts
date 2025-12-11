@@ -8,9 +8,9 @@
   "types": "dist/orak-util-ts.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/orak-util-ts.d.ts",
       "import": "./dist/orak-util-ts.js",
-      "require": "./dist/orak-util-ts.cjs",
-      "types": "./dist/orak-util-ts.d.ts"
+      "require": "./dist/orak-util-ts.cjs"
     }
   },
   "files": [
