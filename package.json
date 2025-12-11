@@ -1,15 +1,22 @@
 {
   "name": "orak-util-ts",
   "version": "1.0.5",
-  "description": "Orak Software Utility Typescript Library",
+  "description": "OrakSoft -Typescript Utility Library",
   "type": "module",
   "main": "dist/orak-util-ts.cjs",
   "module": "dist/orak-util-ts.js",
   "types": "dist/orak-util-ts.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/orak-util-ts.js",
+      "require": "./dist/orak-util-ts.cjs",
+      "types": "./dist/orak-util-ts.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
-  "fiBuildComment": "Add new class to index.ts",
+  "fiBuildComment": "Add new class to index.ts (Yeni eklenen sınıfları index.ts dosyasına ekleyin)",
   "scripts": {
     "np-install": "pnpm install",
     "dev": "tsup --watch",
