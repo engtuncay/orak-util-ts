@@ -2,6 +2,7 @@ import axios from "axios";
 import type { AxiosInstance,AxiosRequestConfig, AxiosResponse } from "axios";
 import { FiKeybean } from "../fiDtc/FiKeybean";
 
+
 export class FiHttpClient {
 
     private axiosInstance: AxiosInstance;
@@ -23,6 +24,10 @@ export class FiHttpClient {
 
         // Gerektiğinde interceptors ekleyerek istek/yanıt süreçlerini handle edebilirsiniz.
         this.initializeResponseInterceptor();
+    }
+
+    public getAxiosInstance(): AxiosInstance {
+        return this.axiosInstance;
     }
 
     // Yanıtları otomatik olarak işlemek için bir interceptor yazıyoruz
