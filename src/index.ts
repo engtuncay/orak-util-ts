@@ -1,3 +1,6 @@
+export { IFiBaseLogger } from './fiLog/IFiBaseLogger';
+export { FiApp } from "./fiApp/FiApp";
+export { FiLogger } from "./fiLog/FiLogger";
 export { FiEnv } from "./fiCore/FiEnv";
 //export {Fel} from "./fiDataContainer/Fel";
 export { FiKeyEntity } from "./fiDtc/FiKeyEntity";
@@ -24,3 +27,4 @@ export type { IFiTableFkb } from "./fiDtc/IFiTableFkb";
 //     //let a = new FiKeyEntity()
 //     return `Hello, ${name}!`;
 // }
+
