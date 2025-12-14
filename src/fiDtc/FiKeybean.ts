@@ -46,6 +46,16 @@ export class FiKeybean {
     this.fiPut(fiMeta.getTxKeyNtn(), txValue);
   }
 
+  /**
+   * addFieldByFiMeta shortcut method
+   * 
+   * @param fiMeta 
+   * @param txValue 
+   */
+  public addFieldByFm(fiMeta: FiMeta, txValue: string):void {
+    this.addFieldByFiMeta(fiMeta, txValue);
+  }
+
   public getFieldName(): string {
     return this.fiGetAsStringNtn(FimFiCol.ofcTxFieldName().fimTxKey);
   }
