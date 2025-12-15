@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "OrakSoft -Typescript Utility Library",
   "type": "module",
   "main": "dist/orak-util-ts.cjs",

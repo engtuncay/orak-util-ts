@@ -1,3 +1,6 @@
+export { FimFiRes } from './fiMeta/FimFiRes';
+export { FiObject  } from './fiDtc/FiObject';
+export { FimFiReq } from './fiMeta/FimFiReq';
 export { IFiBaseLogger } from './fiLog/IFiBaseLogger';
 export { FiApp } from "./fiApp/FiApp";
 export { FiLogger } from "./fiLog/FiLogger";
@@ -20,6 +23,7 @@ export { FiLocalStorage } from "./fiBrowser/FiLocalStorage";
 export { FimFiCol } from "./fiMeta/FimFiCol";
 export type { IFiTableFic } from "./fiDtc/IFiTableFic";
 export type { IFiTableFkb } from "./fiDtc/IFiTableFkb";
+
 
 // // Example function
 
