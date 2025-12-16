@@ -15,7 +15,7 @@ export class FkbList {
     }
 
     getFkbListInit():Array<FiKeybean>{
-        if (this.fkbList == undefined) {
+        if (this.fkbList == undefined || this.fkbList == null) {
             this.fkbList = [];
         }
         return this.fkbList;

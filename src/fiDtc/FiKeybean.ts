@@ -60,4 +60,9 @@ export class FiKeybean {
     return this.fiGetAsStringNtn(FimFiCol.ofcTxFieldName().fimTxKey);
   }
 
+  public isNumber(): boolean {
+    const fieldType = this.fiGetAsStringNtn(FimFiCol.ofcTxFieldType().fimTxKey).toLowerCase();
+    return fieldType === "number" || fieldType === "float" || fieldType === "double" || fieldType === "int";
+  }
+
 }
