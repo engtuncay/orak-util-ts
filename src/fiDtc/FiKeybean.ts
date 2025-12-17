@@ -42,7 +42,7 @@ export class FiKeybean {
   constructor() {
   }
 
-  public addFieldByFiMeta(fiMeta: FiMeta, txValue: string):void {
+  public addFieldByFiMeta(fiMeta: FiMeta, txValue: any):void {
     this.fiPut(fiMeta.getTxKeyNtn(), txValue);
   }
 
@@ -52,7 +52,7 @@ export class FiKeybean {
    * @param fiMeta 
    * @param txValue 
    */
-  public addFieldByFm(fiMeta: FiMeta, txValue: string):void {
+  public addFieldByFm(fiMeta: FiMeta, txValue: any):void {
     this.addFieldByFiMeta(fiMeta, txValue);
   }
 
