@@ -1,3 +1,9 @@
+
+/**
+ * Güvenlik sebebiyle localStorage işlemlerini lokal sınıftan kullanın.
+ * 
+ * Bu sınıf metodlarından örnek kullanımlarını görebilirsiniz
+ */
 export class FiLocalStorage {
 
 	/**
