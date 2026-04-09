@@ -1,3 +1,7 @@
+export { FiConnConfig } from './fiDbs/FiConnConfig';
+export { FiQuery } from './fiDbs/FiQuery';
+export { FiQueryUtil } from './fiDbs/FiQueryUtil';
+export { FiQugen } from './fiDbs/FiQugen';
 export { FimFiRes } from './fiMeta/FimFiRes';
 export { FiObject  } from './fiDtc/FiObject';
 export { FimFiReq } from './fiMeta/FimFiReq';
@@ -23,6 +27,8 @@ export { FiLocalStorage } from "./fiBrowser/FiLocalStorage";
 export { FimFiCol } from "./fiMeta/FimFiCol";
 export type { IFiTableFic } from "./fiDtc/IFiTableFic";
 export type { IFiTableFkb } from "./fiDtc/IFiTableFkb";
+
+
 
 
 // // Example function
