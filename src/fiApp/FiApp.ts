@@ -1,4 +1,5 @@
 import { IFiBaseLogger } from "../fiLog/IFiBaseLogger";
+import { IFiConfiger } from "./IFiConfiger";
 
 
 /**
@@ -8,7 +9,7 @@ export class FiApp {
 
   static fiLogger?: IFiBaseLogger;
 
-
+  static fiConfiger?: IFiConfiger;
 
 
 }
