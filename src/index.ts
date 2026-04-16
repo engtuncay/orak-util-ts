@@ -27,8 +27,7 @@ export { FiLocalStorage } from "./fiBrowser/FiLocalStorage";
 export { FimFiCol } from "./fiMeta/FimFiCol";
 export type { IFiTableFic } from "./fiDtc/IFiTableFic";
 export type { IFiTableFkb } from "./fiDtc/IFiTableFkb";
-
-
+export type { IFiConfiger } from "./fiApp/IFiConfiger";
 
 
 // // Example function
