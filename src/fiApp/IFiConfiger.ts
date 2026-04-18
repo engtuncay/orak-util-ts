@@ -2,6 +2,6 @@ import { FiConnConfig } from "../fiDbs/FiConnConfig";
 
 export interface IFiConfiger {
 
-  getFiConnConfig(): FiConnConfig;
+  getFiConnConfig(connProfile:string): FiConnConfig;
 
 }
