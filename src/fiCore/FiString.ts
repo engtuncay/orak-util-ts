@@ -1,6 +1,6 @@
 export class FiString {
-  static cropWitDot(musTXTUNVAN: string, arg1: number) {
-    return this.crop(musTXTUNVAN, arg1, '..');
+  static cropWitDot(txValue: string, arg1: number) {
+    return this.crop(txValue, arg1, '..');
   }
   
   public static crop(txValue: string, lnSize: number, txSuffix: string = '') {
