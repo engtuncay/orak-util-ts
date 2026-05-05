@@ -1,22 +1,22 @@
 export class FiCol {
 
-  ofcTxFieldName?: string;
-  ofcTxHeader?: string;
-  ofcTxDbFieldName?: string;
-  ofcBoUniqGro1?: boolean;
-  ofcBoNullable?: boolean;
-  ofcBoUnique?: boolean;
-  ofcBoUtfSupport?: boolean;
-  ofcTxDefValue?: string;
-  ofcTxCollation?: string;
-  ofcTxTypeName?: string;
-  ofcLnLength?: number;
-  ofcLnPrecision?: number;
-  ofcLnScale?: number;
-  ofcBoFilterLike?: boolean;
-  ofcTxFieldType?: string;
-  ofcTxEntityName?: string;
-  oftBoTransient?: boolean;
+  fcTxFieldName?: string;
+  fcTxHeader?: string;
+  fcTxDbFieldName?: string;
+  fcBoUniqGro1?: boolean;
+  fcBoNullable?: boolean;
+  fcBoUnique?: boolean;
+  fcBoUtfSupport?: boolean;
+  fcTxDefValue?: string;
+  fcTxCollation?: string;
+  fcTxTypeName?: string;
+  fcLnLength?: number;
+  fcLnPrecision?: number;
+  fcLnScale?: number;
+  fcBoFilterLike?: boolean;
+  fcTxFieldType?: string;
+  fcTxEntityName?: string;
+  fcBoTransient?: boolean;
   
   txLabel?: string;
   txGuid?: string;
@@ -98,8 +98,8 @@ export class FiCol {
 
   public static bui(txFieldName:string,txHeader:string):FiCol {
     let fiCol = new FiCol();
-    fiCol.ofcTxFieldName = txFieldName;
-    fiCol.ofcTxHeader = txHeader;
+    fiCol.fcTxFieldName = txFieldName;
+    fiCol.fcTxHeader = txHeader;
     return fiCol;
   }
 }

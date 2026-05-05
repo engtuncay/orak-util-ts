@@ -9,5 +9,5 @@
 //   let txFieldName = "name";
 //   let fiCol = FiCol.bui(txFieldName,"Header");
 //   //console.log('ficol test');
-//   expect(fiCol.ofcTxFieldName).toBe(txFieldName);
+//   expect(fiCol.fcTxFieldName).toBe(txFieldName);
 // });
