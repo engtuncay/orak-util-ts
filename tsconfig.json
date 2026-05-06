@@ -20,6 +20,7 @@
     "resolveJsonModule": true,
     "outDir": "dist",
     "rootDir": "src",
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
   }
 }
