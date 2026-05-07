@@ -1,4 +1,5 @@
-// Codegen v2
+// v4 çıktı
+// Codegen v2 
 import { FiMeta } from "../fiDtc/FiMeta";
 
 export class FimFiCol {
