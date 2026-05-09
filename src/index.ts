@@ -19,7 +19,7 @@ export { FiMeta } from "./fiDtc/FiMeta";
 export { Fdr } from "./fiDtc/Fdr";
 export { FiLog } from "./fiDtc/FiLog";
 export { FiCol } from "./fiDtc/FiCol";
-export { FiKeybean } from "./fiDtc/FiKeybean";
+export { Fkb as Fkb } from "./fiDtc/Fkb";
 export { FkbList } from "./fiDtc/FkbList";
 export { FicList } from "./fiDtc/FicList";
 export type { IFiMeta } from "./fiDtc/IFiMeta";

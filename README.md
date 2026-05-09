@@ -1,6 +1,6 @@
 **Orak Software Utility Typescript Library**
 
-# Fikeybean
+# Fkb
 
 This class wraps a map field with convenient methods.
 

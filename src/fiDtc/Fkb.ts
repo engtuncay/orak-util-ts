@@ -1,10 +1,10 @@
 import { FimFiCol } from "../fiMeta/FimFiCol";
 import { FiMeta } from "./FiMeta";
 
-export class FiKeybean {
+export class Fkb {
   mapData: Map<string, any> = new Map();
 
-  public fiPut(txKey: string, value: any): FiKeybean {
+  public fiPut(txKey: string, value: any): Fkb {
     this.mapData.set(txKey, value);
     return this;
   }

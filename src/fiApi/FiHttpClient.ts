@@ -1,13 +1,13 @@
 import axios from "axios";
 import type { AxiosInstance,AxiosRequestConfig, AxiosResponse } from "axios";
-import { FiKeybean } from "../fiDtc/FiKeybean";
+import { Fkb } from "../fiDtc/Fkb";
 
 
 export class FiHttpClient {
 
     private axiosInstance: AxiosInstance;
 
-    constructor(baseURL: string, timeout = 10000, fkbExtraHeaders?: FiKeybean) {
+    constructor(baseURL: string, timeout = 10000, fkbExtraHeaders?: Fkb) {
         
       const headersAll = {
         "Content-Type": "application/json",

@@ -1,5 +1,5 @@
 import { FiMeta } from "./FiMeta";
-import { FiKeybean } from './FiKeybean';
+import { Fkb } from './Fkb';
 
 export class FiObject {
   refValue: Record<string, any>;
@@ -17,7 +17,7 @@ export class FiObject {
     return this.refValue[fiMeta.getTxKeyNtn()];
   }
 
-  getValueByFkb(fkb: FiKeybean): any {
+  getValueByFkb(fkb: Fkb): any {
 
     if (fkb == undefined || fkb == null || fkb.getFieldName() == undefined) {
       return null;

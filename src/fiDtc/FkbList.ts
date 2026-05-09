@@ -1,27 +1,27 @@
-import { FiKeybean } from './FiKeybean';
+import { Fkb } from './Fkb';
 
 export class FkbList {
-    fkbList: Array<FiKeybean> = [];
+    fkbList: Array<Fkb> = [];
 
     constructor() {
     }
 
-    add(fkb:FiKeybean) {
+    add(fkb:Fkb) {
         this.push(fkb);
     }
 
-    push(fkb:FiKeybean) {
+    push(fkb:Fkb) {
         this.fkbList.push(fkb);
     }
 
-    getFkbListInit():Array<FiKeybean>{
+    getFkbListInit():Array<Fkb>{
         if (this.fkbList == undefined || this.fkbList == null) {
             this.fkbList = [];
         }
         return this.fkbList;
     }
 
-    getArray(): Array<FiKeybean> {
+    getArray(): Array<Fkb> {
         return this.fkbList;
     }
 }
