@@ -1,7 +1,9 @@
 {
   "name": "orak-util-ts",
-  "version": "1.1.8",
+  "version": "1.1.9",
+  "fiPrefix": "out",
   "description": "OrakSoft -Typescript Utility Library",
+  "zdescription": "not : axios çıkarılabilir",
   "type": "module",
   "main": "dist/orak-util-ts.cjs",
   "module": "dist/orak-util-ts.js",
@@ -18,17 +20,17 @@
   ],
   "fiBuildComment": "Add new class to index.ts (Yeni eklenen sınıfları index.ts dosyasına ekleyin)",
   "scripts": {
+    "np-buipub-out": "tsup && npm publish --no-git-checks",
     "np-install": "pnpm install",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
     "np-publish": "npm publish --no-git-checks",
-    "np-build-publish": "tsup && pnpm publish --no-git-checks",
     "np-link-global": "pnpm link --global",
     "np-unlink": "pnpm unlink --global orak-util-ts",
     "np-list-global": "pnpm list -g",
-    "np-pubver" : "npm view orak-util-ts version"
+    "np-pubver": "npm view orak-util-ts version"
   },
   "keywords": [
     "typescript",

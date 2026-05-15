@@ -9,7 +9,6 @@ export { IFiBaseLogger } from './fiLog/IFiBaseLogger';
 export { FiApp } from "./fiApp/FiApp";
 export { FiLogger } from "./fiLog/FiLogger";
 export { FiEnv } from "./fiCore/FiEnv";
-//export {Fel} from "./fiDataContainer/Fel";
 export { FiKeyEntity } from "./fiDtc/FiKeyEntity";
 export { FiFetchClient } from "./fiApi/FiFetchClient";
 export { FiHttpClient } from "./fiApi/FiHttpClient";
@@ -28,9 +27,7 @@ export { FimFiCol } from "./fiMeta/FimFiCol";
 export type { IFiTableFic } from "./fiDtc/IFiTableFic";
 export type { IFiTableFkb } from "./fiDtc/IFiTableFkb";
 export type { IFiConfiger } from "./fiApp/IFiConfiger";
-
-
-// // Example function
+export { Fkw } from "./fiDtc/Fkw";
 
 // export function greet(name: string): string {
 //     //let a = new FiKeyEntity()
