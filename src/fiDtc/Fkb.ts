@@ -9,6 +9,11 @@ export class Fkb {
     return this;
   }
 
+  public add(txKey: string, value: any): Fkb {
+    this.mapData.set(txKey, value);
+    return this;
+  }
+
   public fiGetAsStringNtn(txKey: string | undefined): string {
     if (txKey == undefined) return "";
     if (this.mapData.has(txKey)) return this.mapData.get(txKey).toString();
@@ -44,6 +49,11 @@ export class Fkb {
 
   public addFieldByFiMeta(fiMeta: FiMeta, txValue: any):void {
     this.fiPut(fiMeta.getTxKeyNtn(), txValue);
+  }
+
+  public addFim(fiMeta: FiMeta, txValue: any):void {
+    if(fiMeta?.fimTxKey == undefined) return;
+    this.add(fiMeta.getTxKeyNtn(), txValue);
   }
 
   /**
