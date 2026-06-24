@@ -1,5 +1,4 @@
 diff
-.idea/*
 .nyc_output
 build
 lib
@@ -27,15 +26,12 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-# Webstorm specific
 
 # Node.js bağımlılıkları
 node_modules/
@@ -44,7 +40,7 @@ pnpm-lock.yaml
 yarn.lock
 
 # WebStorm / JetBrains IDE'ye özel dosyalar
-.idea/
+.idea
 *.iml
 *.iws
 out/
@@ -63,8 +59,6 @@ tmp/
 .vscode/
 .DS_Store
 Thumbs.db
-
-# end of webstorm
 
 # Front end projeleri için Derleme çıktıları
 .eslintcache
