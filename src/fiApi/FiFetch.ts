@@ -1,12 +1,5 @@
 import { Fkb } from "../fiDtc/Fkb";
-
-/**
- * FiFetch Raw Response Interface
- */
-export interface FiRawResponse {
-  response: Response;
-  data: any;
-}
+import { FiRawResponse } from "./FiRawResponse";
 
 /**
  * FiFetch 
@@ -15,50 +8,32 @@ export interface FiRawResponse {
  */
 export class FiFetch {
   private baseUrl: string;
-  private defaultHeaders: Fkb;
+  private fkbHeadersDef?: Fkb;
 
-  constructor(baseUrl: string, defaultHeaders: Fkb) {
+  constructor(baseUrl: string, fkbHeadersDefault?: Fkb) {
     this.baseUrl = baseUrl;
-    this.defaultHeaders = defaultHeaders;
+    this.fkbHeadersDef = fkbHeadersDefault;
   }
 
-  // POST işlemi
-  public async post<T>(endpoint: string, data?: object | any[], headers?: Fkb): Promise<T> {
-    const headersObj = headers instanceof Fkb ? headers.getAsObject() : headers;
-    return this.request<T>(endpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...headersObj,
-      },
-      body: JSON.stringify(data),
-    });
-  }
-
-  public async postRaw(endpoint: string, data?: object | any[], headers?: Fkb): Promise<FiRawResponse> {
-    const headersObj = headers instanceof Fkb ? headers.getAsObject() : headers;
-    
-    console.log("1.1.13");
-    
-    return this.requestRaw(endpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...headersObj,
-      },
-      body: JSON.stringify(data),
-    });
-  }
-
-  // Temel fetch işlemi
+    /**
+   * Temel fetch işlemi
+   * 
+   * Default headers ve options birleştirilir ve fetch çağrısı yapılır.
+   * 
+   * @param endpoint 
+   * @param options 
+   * @returns 
+   */
   private async requestRaw(
     endpoint: string,
     options: RequestInit = {}
   ): Promise<FiRawResponse> {
-    console.log("requestRaw called 1823", endpoint);
+    console.log("requestRaw called 1940", endpoint);
     const url = `${this.baseUrl}${endpoint}`;
-    const defaultHeadersObj = this.defaultHeaders instanceof Fkb ? this.defaultHeaders.getAsObject() : this.defaultHeaders;
+    const defaultHeadersObj = this.fkbHeadersDef instanceof Fkb ? this.fkbHeadersDef.getAsObject() : {};
     const optionsHeadersObj = options.headers instanceof Fkb ? options.headers.getAsObject() : options.headers;
+    
+    // Combined headers
     const headers = {
       ...defaultHeadersObj,
       ...optionsHeadersObj,
@@ -85,12 +60,43 @@ export class FiFetch {
     };
   }
 
+  // POST işlemi
+  public async post<T>(endpoint: string, data?: object | any[], headers?: Fkb): Promise<T> {
+    
+    const headersObj = headers instanceof Fkb ? headers.getAsObject() : headers;
+    
+    return this.request<T>(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...headersObj,
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
+  public async postRaw(endpoint: string, data?: object | any[], headers?: Fkb): Promise<FiRawResponse> {
+
+    const headersObj = headers instanceof Fkb ? headers.getAsObject() : headers;
+
+    return this.requestRaw(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...headersObj,
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
+
+
   private async request<T>(
     endpoint: string,
     options: RequestInit = {}
   ): Promise<T> {
     const url = `${this.baseUrl}${endpoint}`;
-    const defaultHeadersObj = this.defaultHeaders instanceof Fkb ? this.defaultHeaders.getAsObject() : this.defaultHeaders;
+    const defaultHeadersObj = this.fkbHeadersDef instanceof Fkb ? this.fkbHeadersDef.getAsObject() : {};
     const optionsHeadersObj = options.headers instanceof Fkb ? options.headers.getAsObject() : options.headers;
     const headers = {
       ...defaultHeadersObj,
@@ -122,26 +128,17 @@ export class FiFetch {
     }
   }
 
+  public async getRaw(endpoint: string, headers?: Fkb): Promise<FiRawResponse> {
+    const headersObj = headers instanceof Fkb ? headers.getAsObject() : headers;
 
-  // Temel fetch işlemi
-  private async requestRaw2(
-    endpoint: string,
-    options: RequestInit = {}
-  ): Promise<Response> {
-    const url = `${this.baseUrl}${endpoint}`;
-    const defaultHeadersObj = this.defaultHeaders instanceof Fkb ? this.defaultHeaders.getAsObject() : this.defaultHeaders;
-    const optionsHeadersObj = options.headers instanceof Fkb ? options.headers.getAsObject() : options.headers;
-    const headers = {
-      ...defaultHeadersObj,
-      ...optionsHeadersObj,
-    };
-
-    return await fetch(url, {
-      ...options,
-      headers,
+    return this.requestRaw(endpoint, {
+      method: "GET",
+      headers: {
+        ...headersObj,
+      }
     });
-
   }
+
 
   // GET işlemi
   // public async get<T>(endpoint: string, headers?: Fks): Promise<T> {
