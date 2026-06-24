@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "1.1.9",
+  "version": "1.1.17",
   "fiPrefix": "out",
   "description": "OrakSoft -Typescript Utility Library",
   "zdescription": "not : axios çıkarılabilir",
@@ -26,6 +26,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
+    "build-out": "tsup",
     "np-publish": "npm publish --no-git-checks",
     "np-link-global": "pnpm link --global",
     "np-unlink": "pnpm unlink --global orak-util-ts",
