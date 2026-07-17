@@ -1,6 +1,6 @@
 {
   "name": "orak-util-ts",
-  "version": "1.1.17",
+  "version": "1.1.20",
   "fiPrefix": "out",
   "description": "OrakSoft -Typescript Utility Library",
   "zdescription": "not : axios çıkarılabilir",
@@ -21,12 +21,12 @@
   "fiBuildComment": "Add new class to index.ts (Yeni eklenen sınıfları index.ts dosyasına ekleyin)",
   "scripts": {
     "np-buipub-out": "tsup && npm publish --no-git-checks",
-    "np-install": "pnpm install",
+    "np-ins": "pnpm install",
     "dev": "tsup --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "build": "tsup",
-    "build-out": "tsup",
+    "build-orakutilts": "tsup",
     "np-publish": "npm publish --no-git-checks",
     "np-link-global": "pnpm link --global",
     "np-unlink": "pnpm unlink --global orak-util-ts",

@@ -60,6 +60,11 @@ export class Fkb {
         this.add(fiMeta.getTxKeyNtn(), txValue);
     }
 
+    public addFkc(fkbCol: Fkb, txValue: any): void {
+        if (fkbCol?.getFn() == undefined) return;
+        this.add(fkbCol.getFn(), txValue);
+    }
+
     /**
      * addFieldByFiMeta shortcut method
      *
@@ -71,6 +76,10 @@ export class Fkb {
     }
 
     public getFieldName(): string {
+        return this.fiGetAsStringNtn(FimFiCol.fcTxFieldName().fimTxKey);
+    }
+
+    public getFn(): string {
         return this.fiGetAsStringNtn(FimFiCol.fcTxFieldName().fimTxKey);
     }
 

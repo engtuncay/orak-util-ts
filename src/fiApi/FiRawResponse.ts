@@ -1,7 +1,7 @@
 /**
  * FiFetch Raw Response Interface
  */
-export interface FiRawResponse {
-  response: Response;
+export class FiRawResponse {
+  response?: Response;
   data: any;
 }

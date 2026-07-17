@@ -1,10 +1,10 @@
-import { Fkb } from "../fiDtc/Fkb";
-import { FiRawResponse } from "./FiRawResponse";
+import {Fkb} from "../fiDtc/Fkb";
+import {FiRawResponse} from "./FiRawResponse";
 
 /**
- * FiFetch 
- * 
- * created 06-24-2026
+ * FiFetch
+ *
+ * created 2026-06-24
  */
 export class FiFetch {
   private baseUrl: string;
@@ -15,14 +15,14 @@ export class FiFetch {
     this.fkbHeadersDef = fkbHeadersDefault;
   }
 
-    /**
+  /**
    * Temel fetch işlemi
-   * 
+   *
    * Default headers ve options birleştirilir ve fetch çağrısı yapılır.
-   * 
-   * @param endpoint 
-   * @param options 
-   * @returns 
+   *
+   * @param endpoint
+   * @param options
+   * @returns
    */
   private async requestRaw(
     endpoint: string,
@@ -32,7 +32,7 @@ export class FiFetch {
     const url = `${this.baseUrl}${endpoint}`;
     const defaultHeadersObj = this.fkbHeadersDef instanceof Fkb ? this.fkbHeadersDef.getAsObject() : {};
     const optionsHeadersObj = options.headers instanceof Fkb ? options.headers.getAsObject() : options.headers;
-    
+
     // Combined headers
     const headers = {
       ...defaultHeadersObj,
@@ -62,9 +62,9 @@ export class FiFetch {
 
   // POST işlemi
   public async post<T>(endpoint: string, data?: object | any[], headers?: Fkb): Promise<T> {
-    
+
     const headersObj = headers instanceof Fkb ? headers.getAsObject() : headers;
-    
+
     return this.request<T>(endpoint, {
       method: "POST",
       headers: {
@@ -88,7 +88,6 @@ export class FiFetch {
       body: JSON.stringify(data),
     });
   }
-
 
 
   private async request<T>(
@@ -147,7 +146,6 @@ export class FiFetch {
   //         headers,
   //     });
   // }
-
 
 
   // PUT işlemi
