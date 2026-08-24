@@ -28,7 +28,7 @@ export class FiFetch {
     endpoint: string,
     options: RequestInit = {}
   ): Promise<FiRawResponse> {
-    console.log("requestRaw called 1940", endpoint);
+    console.log("requestRaw called", endpoint);
     const url = `${this.baseUrl}${endpoint}`;
     const defaultHeadersObj = this.fkbHeadersDef instanceof Fkb ? this.fkbHeadersDef.getAsObject() : {};
     const optionsHeadersObj = options.headers instanceof Fkb ? options.headers.getAsObject() : options.headers;

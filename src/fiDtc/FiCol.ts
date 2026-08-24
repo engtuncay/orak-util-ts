@@ -95,6 +95,7 @@ export class FiCol {
   // fnValidate?:Function;
   boEditorOnlyNumber?: boolean;
   boWhereField?: boolean;
+  //fkbExtra?: Fkb;
 
   public static bui(txFieldName:string,txHeader:string):FiCol {
     let fiCol = new FiCol();
